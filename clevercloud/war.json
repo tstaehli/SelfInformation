@@ -1,0 +1,16 @@
+{
+	"build": {
+		"type": "maven",
+		"goal": "package"
+	},
+	"deploy": {
+		"container": "JETTY9",
+		"war": [
+			{
+				"file": "target/SelfInformation-0.0.1-SNAPSHOT.war",
+				"context": "/",
+				"checkMe": "/selfinformation"
+			}
+		]
+	}
+}
